@@ -1,0 +1,357 @@
+// Color Variables
+$primary-color: #007bff
+$secondary-color-1: #0056b3
+$secondary-color-2: #003d7a
+$accent-color-1: #80caff
+$accent-color-2: #c5e8ff
+$accent-color-3: #e6f5ff
+$light-background: #ffffff
+$medium-background: #dbdbdb
+$dark-text: #003d7a
+$subtext: #707070
+$button-background: #e8f5e9
+$button-text: #388e3c
+$button-border: #c8e6c9
+$footer-background: #333
+$footer-text: #fff
+$hover-color: #1e90ff
+
+// Global Styles
+* 
+  margin: 0
+  font-family: 'Akaya Telivigala', cursive
+  padding: 0
+
+.main
+  background-color: $medium-background
+
+// Navigation Bar
+.nav
+  display: flex
+  background-color: $light-background
+  position: fixed
+  width: 100%
+  z-index: 1000
+  top: 0
+
+  img
+    width: 60px
+    margin-right: 20px
+
+  .logo
+    width: 160px
+    margin-right: 500px
+
+  a
+    float: left
+    display: block
+    color: black
+    text-align: center
+    padding: 14px 16px
+    text-decoration: none
+    font-size: 17px
+
+    &:hover
+      transition: 0.4s
+      color: $hover-color
+      font-weight: bold
+      transition: 0.3s
+      transform: scale(1.1)
+
+    &.active
+      font-weight: bold
+      color: $secondary-color-1
+
+  input[type=text]
+    margin-left: auto
+    padding: 6px
+    background-color: $accent-color-3
+    border: none
+    margin-top: 8px
+    margin-right: 16px
+    margin-bottom: 8px
+    font-size: 17px
+    border-radius: 20px
+
+.content
+  padding-top: 60px
+
+// Promo Banner
+.promo
+  img
+    width: 100%
+
+// Item Organization
+.grid-container
+  display: grid
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  gap: 20px
+  padding: 10px
+  margin: 40px 100px 70px 100px
+
+.grid-item
+  width: 100%
+  height: auto
+  text-align: center
+
+  img
+    width: 300px
+    border-radius: 10px
+
+  h2
+    font-weight: bold
+
+  span
+    color: red
+    font-size: 25px
+    font-weight: bold
+
+  sup
+    font-size: 20px !important
+    font-weight: lighter
+
+  button
+    width: auto
+    margin-left: 20px !important
+    background-color: $secondary-color-1
+    color: $accent-color-2
+    border: 1px solid $button-border
+    border-radius: 10px !important
+    padding: 10px 20px
+    font-size: 16px
+    cursor: pointer
+    transition: background-color 0.3s, transform 0.3s
+    display: inline-block
+    text-align: center
+    text-decoration: none
+
+    &:hover
+      background-color: $secondary-color-2
+      transform: scale(1.02)
+
+    &:focus
+      outline: none
+
+// Footer
+.footer
+  background-color: $secondary-color-2
+  color: $footer-text
+  text-align: center
+  padding: 20px 0
+  position: relative
+  bottom: 0
+  width: 100%
+
+// Quick Links
+.quick-links
+  margin-bottom: 10px
+
+  a
+    color: $footer-text
+    text-decoration: none
+    margin: 0 15px
+    font-size: 14px
+    transition: color 0.3s ease
+
+    &:hover
+      color: $accent-color-2
+
+// Social Media Icons
+.social-icons
+  margin-top: 10px
+
+  a
+    color: $footer-text
+    margin: 0 10px
+    text-decoration: none
+    font-size: 24px
+    transition: color 0.3s ease
+
+    &:hover
+      color: $hover-color
+
+// Contact Page
+.contact
+  color: $footer-background
+  max-width: 1200px
+  margin: 50px auto
+  padding: 20px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  background-color: $light-background
+  border-radius: 8px
+  display: flex
+  gap: 20px
+
+  .contact-details
+    flex: 1
+    min-width: 0
+
+  .contact-form
+    flex: 1
+    min-width: 0
+    display: flex
+    flex-direction: column
+
+    form
+      display: flex
+      flex-direction: column
+
+    label
+      margin-bottom: 5px
+
+    input, textarea
+      margin-bottom: 10px
+      padding: 10px
+      border: 1px solid #ddd
+      border-radius: 4px
+      background-color: $accent-color-3
+
+// Deals Page
+.deals
+  padding: 20px
+  background-color: $light-background
+  max-width: 800px
+  margin: 50px auto
+  border-radius: 8px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+  h1
+    margin-bottom: 20px
+    font-size: 24px
+    color: $footer-background
+
+.deal-list
+  list-style: none
+  padding: 0
+  margin: 0
+
+.deal-item
+  background-color: $accent-color-2
+  border: 1px solid $dark-text
+  border-radius: 4px
+  padding: 15px
+  margin: 10px 0
+  font-size: 18px
+  color: $dark-text
+  transition: background-color 0.3s, transform 0.3s
+
+  &:hover
+    background-color: $accent-color-1
+    transform: scale(1.02)
+
+// Product Categories Page
+.product-categories
+  padding: 20px
+  background-color: $light-background
+  max-width: 1000px
+  margin: 50px auto
+  border-radius: 8px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+
+  h1
+    margin-bottom: 20px
+    font-size: 24px
+    color: $footer-background
+
+  .category
+    margin-bottom: 30px
+
+    h2
+      margin-bottom: 15px
+      font-size: 20px
+      color: $dark-text
+
+  .product-list
+    list-style: none
+    padding: 0
+    margin: 0
+
+    li
+      background-color: $accent-color-2
+      border: 1px solid $dark-text
+      border-radius: 4px
+      padding: 10px
+      margin: 5px 0
+      font-size: 16px
+      color: $dark-text
+      transition: background-color 0.3s, transform 0.3s
+
+      a
+        text-decoration: none
+        color: $dark-text
+        display: block
+
+        &:hover
+          color: $dark-text
+
+      &:hover
+        background-color: $accent-color-1
+        transform: scale(1.02)
+
+// Purchase Page
+.purbdy
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  margin: 0
+  background-color: $medium-background
+
+.purchase-container
+  background-color: $accent-color-3
+  padding: 20px
+  border-radius: 10px
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  max-width: 400px
+  width: 100%
+  text-align: center
+
+  h2
+    margin-bottom: 20px
+
+  input
+    width: 90%
+    padding: 10px
+    margin: 10px 0
+    border: 1px solid #ccc
+    border-radius: 5px
+
+button
+  margin-left: 20px !important
+  background-color: $secondary-color-1
+  color: $accent-color-2
+  border: 1px solid $button-border
+  border-radius: 10px !important
+  padding: 10px 20px
+  font-size: 16px
+  cursor: pointer
+  transition: background-color 0.3s, transform 0.3s
+  display: inline-block
+  text-align: center
+  text-decoration: none
+  width: auto 
+
+  &:hover
+    background-color: $secondary-color-2
+    transform: scale(1.02)
+
+
+.faqcontainer
+  width: 80%
+  margin: 0 auto
+  padding: 20px
+
+h1, h2
+  text-align: center
+  color: #333
+
+.faq
+  margin: 20px 0
+
+.question
+  font-weight: bold
+  color: #444
+
+.answer
+  margin-top: 10px
+  margin-bottom: 20px
